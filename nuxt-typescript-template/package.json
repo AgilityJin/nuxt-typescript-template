@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-typescript-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.6.0"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^0.4.0",
+    "nuxt": "^2.11.0",
+    "vue-property-decorator": "^8.4.0"
+  }
+}
