@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
     "module": "esnext",
     "moduleResolution": "node",
     "lib": [
@@ -8,9 +8,9 @@
       "esnext.asynciterable",
       "dom"
     ],
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
     "allowJs": true,
     "checkJs": true,
     "sourceMap": true,
@@ -18,22 +18,26 @@
     "noEmit": true,
     "baseUrl": "src",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"],
-      "~~/*": ["./*"],
-      "@@/*": ["./*"]
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
     "types": [
       "@types/node",
       "@nuxt/types",
-      "@types/jest",
-      "@types/lodash",
-      "@types/dotenv",
-      "vuetify"
+      "@nuxtjs/vuetify",
+      "@types/lodash"
     ]
   },
   "include": [
     "src/**/*"
   ],
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
 }

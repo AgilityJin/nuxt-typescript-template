@@ -1,12 +1,9 @@
 import { Configuration } from '@nuxt/types'
-import colors from 'vuetify/es5/util/colors'
+require('dotenv').config() // 使server端也可以访问
 
 const NuxtConfig: Configuration = {
   mode: 'universal',
   srcDir: 'src',
-  /*
-   ** Headers of the page
-   */
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
@@ -21,87 +18,61 @@ const NuxtConfig: Configuration = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: ['minireset.css', '~/assets/styles/global.styl'],
-  styleResources: {
-    // stylus config
-    stylus: ['~/assets/styles/var.styl', '~/assets/styles/bem.styl']
-  },
+  css: [
+    'minireset.css',
+    '~/assets/styles/global.styl'
+  ],
+  plugins: [
+  ],
+  // SSR need active
   // generate: {
   //   routes: [
   //     '/'
   //   ]
   // },
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/router',
-    '@nuxtjs/vuetify'
-  ],
-  eslint: {
-    fix: true
-  },
-  // typescript: {
-  //   typeCheck: {
-  //     eslint: true
-  //   }
-  // },
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
-  /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
-  },
-  /*
-   ** Build configuration
-   */
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/router',
+    '@nuxtjs/vuetify'
+  ],
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config) {
       if (config.resolve) {
         config.resolve.symlinks = false
       }
+    }
+  },
+  // plugins config
+  routerModule: {
+    path: 'src/router',
+    fileName: 'index.ts'
+  },
+  styleResources: {
+    // stylus config
+    stylus: ['~/assets/styles/var.styl', '~/assets/styles/bem.styl']
+  },
+  vuetify: {
+    customVariables: [],
+    optionsPath: './vuetify.options.ts'
+  },
+  dotenv: {
+    path: './src/config/',
+    filename: `${process.env.NODE_ENV}.env`
+  },
+  eslint: {
+    fix: true,
+    formatter: 'table'
+  },
+  typescript: {
+    typeCheck: {
+      eslint: true
     }
   }
 }
