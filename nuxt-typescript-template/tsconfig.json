@@ -9,7 +9,10 @@
       "dom"
     ],
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "allowJs": true,
+    "checkJs": true,
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
@@ -24,10 +27,17 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "node",
+      "@nuxt/types",
+      "@nuxtjs/vuetify"
     ]
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".nuxt",
+    "dist"
   ]
 }

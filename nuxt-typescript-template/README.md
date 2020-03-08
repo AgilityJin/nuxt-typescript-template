@@ -4,5 +4,11 @@
 
 ## 功能项
 
-* Typescript
-* vue-property-decorator
+[x] Typescript
+[x] vue-property-decorator
+[x] stylus
+[x] style-resources
+[x] vue-router
+[x] minireset.css
+[x] vuetify
+[x] dotenv
