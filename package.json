@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "keywords": [
+    "Nuxt",
+    "Vue",
+    "Typescript",
+    "template"
+  ],
+  "author": "Agility Jin <agility_jin@outlook.com>",
+  "engines":{
+    "node": ">=8.0.0",
+    "npm": ">=5.2.0"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development && nuxt-ts",
     "build": "cross-env NODE_ENV=production && nuxt-ts build",
