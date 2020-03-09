@@ -6,7 +6,7 @@
 
 [x] Typescript
 [x] vue-property-decorator
-[x] stylus
+[x] stylus & support BEM
 [x] style-resources
 [x] vue-router
 [x] minireset.css
