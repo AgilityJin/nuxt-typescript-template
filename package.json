@@ -41,6 +41,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/router": "^1.5.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg-sprite": "^0.4.9",
     "cross-env": "^7.0.2",
     "lodash": "^4.17.15",
     "minireset.css": "^0.0.6",

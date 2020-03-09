@@ -34,7 +34,8 @@ const NuxtConfig: Configuration = {
   modules: [
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/svg-sprite'
   ],
   buildModules: [
     '@nuxt/typescript-build',
@@ -74,6 +75,9 @@ const NuxtConfig: Configuration = {
     typeCheck: {
       eslint: true
     }
+  },
+  svgSprite: {
+    input: '~/assets/svg/'
   }
 }
 

@@ -4,13 +4,14 @@
 
 ## 功能项
 
-[x] Typescript
-[x] vue-property-decorator
-[x] stylus & support BEM
-[x] style-resources
-[x] vue-router
-[x] minireset.css
-[x] vuetify
-[x] dotenv
-[x] Eslint & autofix
-[x] commitlint
+- [x] Typescript
+- [x] [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator#readme)
+- [x] commitlint
+- [x] [dotenv](https://github.com/nuxt-community/dotenv-module)
+- [x] Eslint & autofix
+- [x] [vue-router](https://router.vuejs.org/zh/)
+- [x] minireset.css
+- [x] style-resources
+- [x] [stylus](https://stylus.bootcss.com/)
+- [x] [vuetify](https://vuetifyjs.com/zh-Hans/)
+- [x] [svg-sprite](https://www.npmjs.com/package/@nuxtjs/svg-sprite)
