@@ -13,3 +13,4 @@
 [x] vuetify
 [x] dotenv
 [x] Eslint & autofix
+[x] commitlint
