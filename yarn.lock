@@ -827,6 +827,11 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+"@mdi/js@^5.0.45":
+  version "5.0.45"
+  resolved "http://120.55.82.162:8081/repository/linkedcare-npm/@mdi/js/-/js-5.0.45.tgz#50859fbbf5dda70b6f27603c9374077c2295145f"
+  integrity sha1-UIWfu/XdpwtvJ2A8k3QHfCKVFF8=
+
 "@nuxt/babel-preset-app@2.11.0":
   version "2.11.0"
   resolved "http://r.cnpmjs.org/@nuxt/babel-preset-app/download/@nuxt/babel-preset-app-2.11.0.tgz#e89fdb7ef5c08dce13532ccf63a7064399f67ab0"

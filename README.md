@@ -15,3 +15,5 @@
 - [x] [stylus](https://stylus.bootcss.com/)
 - [x] [vuetify](https://vuetifyjs.com/zh-Hans/)
 - [x] [svg-sprite](https://www.npmjs.com/package/@nuxtjs/svg-sprite)
+- [x] [@mdi/js](https://dev.materialdesignicons.com/getting-started) 按需使用的字体图标库
+- [x] lodash

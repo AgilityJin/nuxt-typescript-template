@@ -3,7 +3,9 @@ import colors from 'vuetify/es5/util/colors'
 export default function ({ app }) {
   return {
     breakpoint: {},
-    icons: {},
+    icons: {
+      iconfont: 'mdiSvg'
+    },
     lang: {},
     rtl: true,
     theme: {

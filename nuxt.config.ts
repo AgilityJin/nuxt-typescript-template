@@ -60,7 +60,7 @@ const NuxtConfig: Configuration = {
     stylus: ['~/assets/styles/var.styl', '~/assets/styles/bem.styl']
   },
   vuetify: {
-    customVariables: [],
+    customVariables: ['~/assets/variables.scss'],
     optionsPath: './vuetify.options.ts'
   },
   dotenv: {

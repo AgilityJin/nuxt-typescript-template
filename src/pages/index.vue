@@ -6,11 +6,15 @@
     <v-btn small color="primary">
       Primary
     </v-btn><br>
+    <v-icon size="24px">
+      {{ mdiQqchat }}
+    </v-icon>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import { mdiQqchat } from '@mdi/js'
 
 interface User {
   firstName: string;
@@ -18,11 +22,13 @@ interface User {
 }
 
 @Component
-class YourComponent extends Vue {
+export default class YourComponent extends Vue {
   user: User = {
     firstName: 'jxm',
     lastName: 7
   }
+
+  mdiQqchat = mdiQqchat
 
   message: string = 'This is a message'
 
@@ -34,8 +40,6 @@ class YourComponent extends Vue {
     // console.log('Env dotenv: ', process.env.ENV) // get dotenv vars
   }
 }
-
-export default YourComponent
 </script>
 
 <style lang="stylus" scoped>
