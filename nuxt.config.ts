@@ -35,7 +35,8 @@ const NuxtConfig: Configuration = {
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    '@nuxtjs/svg-sprite'
+    '@nuxtjs/svg-sprite',
+    '@nuxtjs/proxy'
   ],
   buildModules: [
     '@nuxt/typescript-build',
@@ -48,6 +49,10 @@ const NuxtConfig: Configuration = {
       if (config.resolve) {
         config.resolve.symlinks = false
       }
+    },
+    babel: {
+      // 按需加载配置
+      plugins: []
     }
   },
   // plugins config
@@ -78,6 +83,14 @@ const NuxtConfig: Configuration = {
   },
   svgSprite: {
     input: '~/assets/svg/'
+  },
+  proxy: {
+    '/api': {
+      target: 'http://localhost:8080',
+      pathRewrite: {
+        '^/api': '/' // 需要rewrite的, 路径重写
+      }
+    }
   }
 }
 
